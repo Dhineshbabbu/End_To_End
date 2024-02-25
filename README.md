@@ -15,3 +15,7 @@ get commit -m "This is my first commit"
 ```
 git pull
 ```
+
+```
+bash your_filiename.sh
+```
