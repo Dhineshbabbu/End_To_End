@@ -10,6 +10,6 @@ source env\\Scripts\\activate
 
 echo [$(date)]: "Installing the dev requirement"
 
-pip install -r requiremenrs.txt
+pip install -r requirements.txt
 
 echo [$(date)]: "END"
