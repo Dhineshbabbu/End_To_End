@@ -5,7 +5,7 @@ import numpy as np
 from dataclasses import dataclass
 from src.DimondPricePrediction.exeception import customException
 from src.DimondPricePrediction.logger import logging
-from src.DimondPricePrediction.utils import save_object,evaluate_model
+from src.DimondPricePrediction.utils.utils import save_object,evaluate_model
 from sklearn.linear_model import LinearRegression,Ridge,Lasso,ElasticNet
 from sklearn.metrics import r2_score,mean_absolute_error,mean_squared_error
 

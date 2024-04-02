@@ -5,7 +5,7 @@ import numpy as np
 from dataclasses import dataclass
 from src.DimondPricePrediction.exeception import customException
 from src.DimondPricePrediction.logger import logging
-from src.DimondPricePrediction.utils import save_object
+from src.DimondPricePrediction.utils.utils import save_object
 from sklearn.impute import SimpleImputer # --> To Handling Missing values
 from sklearn.preprocessing import StandardScaler # --> To Handling Feature Scaling
 from sklearn.preprocessing import OrdinalEncoder # --> To Perform Encoding
