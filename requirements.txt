@@ -4,6 +4,7 @@ numpy
 seaborn
 matplotlib
 ipykernal
+flask
 
 
 -e .
