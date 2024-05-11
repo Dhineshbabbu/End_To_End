@@ -23,8 +23,6 @@ jobs:
               run: docker push dhinesh160503/gem_price_app:latest
 
             - name: Get application URL
-              run: echo "Your application is accessible at:$APPLICATION_URL"
-              env: 
-                APPLICATION_URL: ${{ steps.get_application_url.outputs.url }}
+              run: echo "Your application is accessible at:${{ steps.get_application_url.outputs.url }}"
         
 
