@@ -22,7 +22,7 @@ jobs:
             - name: Push Docker image
               run: docker push dhinesh160503/gem_price_app:latest
 
-            - name: Get application URL
-              run: echo "Your application is accessible at:${{ steps.get_application_url.outputs.url }}"
+            - name: Run Docker container
+              run: docker run -d -p 8080:5000 dhinesh160503/gem_price_app:latest
         
 
