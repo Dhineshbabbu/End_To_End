@@ -33,5 +33,6 @@ jobs:
                   exit 1
                 else
                   echo "Docker container is running."
+                fi
         
 
