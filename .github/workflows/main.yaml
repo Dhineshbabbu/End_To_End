@@ -41,6 +41,14 @@ jobs:
                   CONTAINER_PORT=$(docker port $CONTAINER_ID 5000 | cut -d':' -f2)
                   APPLICATION_URL="http://$CONTAINER_IP:$CONTAINER_PORT"
                   echo "Application URL: $APPLICATION_URL"
+                  echo $APPLICATION_URL > application_url.txt
+        
+              # Upload URL file as artifact
+            - name: Upload URL as artifact
+              uses: actions/upload-artifact@v2
+              with:
+                  name: application_url
+                  path: application_url.txt
               
         
 
