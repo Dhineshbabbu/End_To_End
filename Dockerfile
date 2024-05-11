@@ -1,6 +1,6 @@
 FROM python:3.11-slim-buster
-WORKDIR /service
-COPY requirements.txt .
-COPY . ./
+WORKDIR /app
+COPY . /app
 RUN pip install -r requirements.txt
-ENTRYPOINT [ "python3","app.py" ]  
+EXPOSE $PORT
+CMD ["python3","app.py"]
