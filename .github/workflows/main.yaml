@@ -24,5 +24,14 @@ jobs:
 
             - name: Run Docker container
               run: docker run -d -p 8080:5000 dhinesh160503/gem_price_app:latest
+            
+            - name: Check if Docker container is running
+              run: |
+                CONTAINER_ID=$(docker ps -q --filter ancestor=dhinesh160503/gem_price_app:latest)
+                if [ -z "$CONTAINER_ID" ]; then
+                  echo "Docker container is not running."
+                  exit 1
+                else
+                  echo "Docker container is running."
         
 
