@@ -34,5 +34,13 @@ jobs:
                 else
                   echo "Docker container is running."
                 fi
+            - name: Get container IP address and port
+              run: |
+                  CONTAINER_ID=$(docker ps -q --filter ancestor=dhinesh160503/gem_price_app:latest)
+                  CONTAINER_IP=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $CONTAINER_ID)
+                  CONTAINER_PORT=$(docker port $CONTAINER_ID 5000 | cut -d':' -f2)
+                  APPLICATION_URL="http://$CONTAINER_IP:$CONTAINER_PORT"
+                  echo "Application URL: $APPLICATION_URL"
+              
         
 
